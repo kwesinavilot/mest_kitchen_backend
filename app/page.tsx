@@ -1,4 +1,4 @@
-import { Container, Title, SimpleGrid, Skeleton, Grid, rem, Paper, Text } from "@mantine/core";
+import { Container, Title, SimpleGrid, Card, rem, Paper, Text, Stack } from "@mantine/core";
 import classes from "./page.module.css";
 
 const PRIMARY_COL_HEIGHT = rem(300);
@@ -25,13 +25,27 @@ export default function Home() {
             <Title order={3} c="cyan.6">EIT Directory</Title>
           </Paper>
 
-          <Paper shadow="xs" withBorder p="xl" radius="md">
-            <Text>Paper is the most basic ui component</Text>
-            <Text>
-              Use it to create cards, dropdowns, modals and other components that require background
-              with shadow
-            </Text>
-          </Paper>
+          <Stack
+            justify="flex-start"
+            gap="xl"
+          >
+            <Card withBorder radius="md" p="xl" className={classes.requestCount}>
+              <Title order={3}>Total number of meal pick up requests</Title>
+
+              <Text ta="center" fz={60} mt="xs">
+                14
+              </Text>
+            </Card>
+
+            <Paper shadow="xs" withBorder p="xl" radius="md">
+              <Text>Paper is the most basic ui component</Text>
+              <Text>
+                Use it to create cards, dropdowns, modals and other components that require background
+                with shadow
+              </Text>
+            </Paper>
+          </Stack>
+
         </SimpleGrid>
       </Container>
     </main>
