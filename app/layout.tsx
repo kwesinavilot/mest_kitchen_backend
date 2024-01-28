@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Footer } from '@/components/layout/Footer';
+import { Header } from '@/components/layout/Header';
 
 export const metadata = {
   title: 'MEST Kitchen',
@@ -20,12 +21,13 @@ export default function RootLayout({
       <body>
         <MantineProvider
           theme={{
+            primaryColor: 'brand',
             colors: {
-              'ocean-blue': ['#3BC9DB', '#22B8CF', '#15AABF', '#2AC9DE', '#1AC2D9', '#11B7CD', '#09ADC3', '#0E99AC', '#128797', '#147885'],
+              'brand': ['#3BC9DB', '#22B8CF', '#15AABF', '#2AC9DE', '#1AC2D9', '#11B7CD', '#09ADC3', '#0E99AC', '#128797', '#147885'],
             },
-            primaryColor: 'ocean-blue',
           }}
         >
+          <Header />
           {children}
           <Footer />
         </MantineProvider>
