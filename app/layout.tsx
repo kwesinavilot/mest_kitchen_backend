@@ -1,3 +1,4 @@
+import classes from './globals.module.css';
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Footer } from '@/components/layout/Footer';
@@ -18,7 +19,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body>
+      <body className={classes.body}>
         <MantineProvider
           theme={{
             primaryColor: 'brand',

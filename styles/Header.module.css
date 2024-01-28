@@ -1,7 +1,7 @@
 .header {
     padding-top: var(--mantine-spacing-lg);
     background-color: var(--mantine-color-white-0);
-    margin-bottom: rem(120px);
+    margin-bottom: 2%;
 }
 
 .inner {
