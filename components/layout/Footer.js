@@ -3,7 +3,7 @@ import classes from '../../styles/Footer.module.css';
 
 export function Footer() {
     return (
-        <div className={classes.footer}>
+        <footer className={classes.footer}>
             <Container size="xl" className={classes.inner}>
                 <Text c="dimmed" size="sm">
                     MVP Team
@@ -13,6 +13,6 @@ export function Footer() {
                     © 2024 All rights reserved.
                 </Text>
             </Container>
-        </div>
+        </footer>
     );
 }

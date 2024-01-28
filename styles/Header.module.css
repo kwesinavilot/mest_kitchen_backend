@@ -5,24 +5,24 @@
 }
 
 .inner {
-    height: rem(60px);
+    height: rem(70px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--mantine-color-white-0);
     border-radius: 20px;
-    padding: auto 5%;
+    padding: 0px 25px !important;
 }
 
 .user {
     color: var(--mantine-color-white);
-    padding: 0 var(--mantine-spacing-sm);
+    padding: 6px var(--mantine-spacing-sm);
     border-radius: var(--mantine-radius-sm);
     transition: background-color 100ms ease;
-    /* background: var(--mantine-color-dark-8); */
+    background: "transparent";
 
     &:hover {
-        background-color: "transparent";
+        background-color: var(--mantine-color-cyan-5);
     }
 
     @media (max-width: $mantine-breakpoint-xs) {

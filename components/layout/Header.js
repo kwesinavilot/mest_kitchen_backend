@@ -13,7 +13,7 @@ export function Header() {
                     className={classes.user}
                 >
                     <Group gap={7}>
-                        <Avatar src="../../assets/headshot.png" alt="Hello" radius="xl" size="md" />
+                        <Avatar src="../../assets/headshot.png" variant="outline" alt="Hello" radius="xl" size="md" />
 
                         <Text fw={500} size="sm" lh={1} mr={3}>
                             Chef Vinyl
