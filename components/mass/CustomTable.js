@@ -38,7 +38,7 @@ export function CustomTable({data}) {
                 highlightOnHover
                 stickyHeader
                 withRowBorders={false}
-                horizontalSpacing="lg"
+                horizontalSpacing="xs"
                 verticalSpacing="md"
             >
                 <Table.Thead>
