@@ -3,11 +3,9 @@
 import { Avatar, ScrollArea, Table, Group, Badge, Text, ActionIcon, Menu, rem } from '@mantine/core';
 import {
     IconPencil,
-    IconMessages,
-    IconNote,
-    IconReportAnalytics,
     IconTrash,
     IconDots,
+    IconEye
 } from '@tabler/icons-react';
 
 import classes from '@/styles/Table.module.css';
@@ -42,7 +40,7 @@ export function EITListing({ data }) {
             <Table.Td>
                 <Group gap={0} justify="flex-end">
                     <ActionIcon variant="subtle" color="gray">
-                        <IconPencil style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+                        <IconEye style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
                     </ActionIcon>
 
                     <Menu
@@ -59,28 +57,16 @@ export function EITListing({ data }) {
                         <Menu.Dropdown>
                             <Menu.Item
                                 leftSection={
-                                    <IconMessages style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+                                    <IconPencil style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
                                 }
                             >
-                                Send message
-                            </Menu.Item>
-                            <Menu.Item
-                                leftSection={<IconNote style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-                            >
-                                Add note
-                            </Menu.Item>
-                            <Menu.Item
-                                leftSection={
-                                    <IconReportAnalytics style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                                }
-                            >
-                                Analytics
+                                Edit Details
                             </Menu.Item>
                             <Menu.Item
                                 leftSection={<IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
                                 color="red"
                             >
-                                Terminate contract
+                                Delete
                             </Menu.Item>
                         </Menu.Dropdown>
                     </Menu>
