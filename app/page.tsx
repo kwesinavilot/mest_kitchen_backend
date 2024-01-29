@@ -2,6 +2,89 @@ import { Container, Title, SimpleGrid, Card, rem, Group, Paper, Text, Stack } fr
 import { CustomTable } from "@/components/mass/CustomTable";
 import classes from "./page.module.css";
 
+const foodCollectionRequests = [
+  {
+      id: '1',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '2',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '3',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '4',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '5',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '6',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '7',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '8',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '9',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+  {
+      id: '10',
+      date: '01/01/2024',
+      requester: "Andrews Kwesi Ankomahene",
+      requesterEmail: "andrewskwesiankomahene@gmail.com",
+      collector: "Steven de Koffi Konan",
+      collectorEmail: 'stevenkonan@meltware.org',
+  },
+];
+
 export default function Home() {
   return (
     <main className={classes.main}>
@@ -50,7 +133,7 @@ export default function Home() {
                 </Group> */}
 
                 <Container mt="sm" fluid p={0}>
-                  <CustomTable />
+                  <CustomTable data={foodCollectionRequests} />
                 </Container>
               </Container>
 
