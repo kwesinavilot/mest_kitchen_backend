@@ -1,0 +1,15 @@
+.thead {
+    color: var(--mantine-color-cyan-6);
+}
+
+.link {
+    text-decoration: none;
+    width: 100%;
+    color: var(--mantine-color-black);
+}
+
+/* .trow {
+    background-color: var(--mantine-color-gray-5);
+    border-radius: 5%;
+    margin-bottom: var(--mantine-spacing-md);
+} */

@@ -1,11 +1,8 @@
-import { Container, Title, SimpleGrid, Card, rem, Paper, Text, Stack } from "@mantine/core";
+import { Container, Title, SimpleGrid, Card, rem, Group, Paper, Text, Stack } from "@mantine/core";
+import { CustomTable } from "@/components/mass/CustomTable";
 import classes from "./page.module.css";
 
-const PRIMARY_COL_HEIGHT = rem(300);
-
 export default function Home() {
-  const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
-
   return (
     <main className={classes.main}>
       <Container size="xl" bg="transparent">
@@ -38,11 +35,25 @@ export default function Home() {
             </Card>
 
             <Paper shadow="xs" withBorder p="xl" radius="md">
-              <Text>Paper is the most basic ui component</Text>
-              <Text>
-                Use it to create cards, dropdowns, modals and other components that require background
-                with shadow
-              </Text>
+              <Title order={3} c="cyan.6">Meal pickup requests</Title>
+
+              <Container fluid p={0}>
+                {/* <Group
+                  gap="xl"
+                  grow
+                  mt="sm"
+                  c="cyan.6"
+                >
+                  <Text>Date</Text>
+                  <Text>EIT Name</Text>
+                  <Text>EIT Picking</Text>
+                </Group> */}
+
+                <Container mt="sm" fluid p={0}>
+                  <CustomTable />
+                </Container>
+              </Container>
+
             </Paper>
           </Stack>
 
