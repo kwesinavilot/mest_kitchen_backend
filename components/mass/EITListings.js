@@ -7,6 +7,7 @@ import {
     IconDots,
     IconEye
 } from '@tabler/icons-react';
+import Link from 'next/link';
 
 import classes from '@/styles/Table.module.css';
 
@@ -20,24 +21,30 @@ export function EITListing({ data }) {
     const rows = data.map((item) => (
         <Table.Tr key={item.name}>
             <Table.Td>
-                <Avatar size={40} src={item.avatar} radius={40} />
+                <Link href={`/members`} className={classes.link}>
+                    <Avatar size={40} src={item.avatar} radius={40} />
+                </Link>
             </Table.Td>
 
             <Table.Td>
-                <Text fz="sm" fw={500}>
-                    {item.name}
-                </Text>
+                <Link href={`/members`} className={classes.link}>
+                    <Text fz="sm" fw={500}>
+                        {item.name}
+                    </Text>
 
-                <Text fz="xs" c="dimmed">{item.email}</Text>
+                    <Text fz="xs" c="dimmed">{item.email}</Text>
+                </Link>
             </Table.Td>
 
             <Table.Td>
-                <Badge color={levelColors[item.level]} variant="light">
-                    {item.level.toUpperCase()}
-                </Badge>
+                <Link href={`/members`} className={classes.link}>
+                    <Badge color={levelColors[item.level]} variant="light">
+                        {item.level.toUpperCase()}
+                    </Badge>
+                </Link>
             </Table.Td>
 
-            <Table.Td>
+            {/* <Table.Td>
                 <Group gap={0} justify="flex-end">
                     <ActionIcon variant="subtle" color="gray">
                         <IconEye style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
@@ -71,7 +78,7 @@ export function EITListing({ data }) {
                         </Menu.Dropdown>
                     </Menu>
                 </Group>
-            </Table.Td>
+            </Table.Td> */}
         </Table.Tr>
     ));
 
@@ -89,7 +96,6 @@ export function EITListing({ data }) {
                         <Table.Th className={classes.thead}></Table.Th>
                         <Table.Th className={classes.thead}>Full Name</Table.Th>
                         <Table.Th className={classes.thead}>Preference Level</Table.Th>
-                        <Table.Th className={classes.thead}>Actions</Table.Th>
                     </Table.Tr>
                 </Table.Thead>
 

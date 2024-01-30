@@ -2,7 +2,7 @@ import { Container, Title, SimpleGrid, Card, Group, Paper, Text, Stack } from "@
 import { CustomTable } from "@/components/mass/CustomTable";
 import { EITListing } from "@/components/mass/EITListings";
 
-import classes from "./page.module.css";
+import classes from "./Homepage.module.css";
 
 const foodCollectionRequests = [
   {

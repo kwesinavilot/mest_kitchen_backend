@@ -14,6 +14,11 @@
     padding: 0px 25px !important;
 }
 
+.link {
+    text-decoration: none;
+    color: var(--mantine-color-black);
+}
+
 .user {
     color: var(--mantine-color-white);
     padding: 6px var(--mantine-spacing-sm);
