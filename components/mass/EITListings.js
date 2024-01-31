@@ -1,12 +1,7 @@
 'use client';
 
-import { Avatar, ScrollArea, Table, Group, Badge, Text, ActionIcon, Menu, rem } from '@mantine/core';
-import {
-    IconPencil,
-    IconTrash,
-    IconDots,
-    IconEye
-} from '@tabler/icons-react';
+import { Avatar, ScrollArea, Table,Badge, Text } from '@mantine/core';
+
 import Link from 'next/link';
 
 import classes from '@/styles/Table.module.css';
@@ -43,42 +38,6 @@ export function EITListing({ data }) {
                     </Badge>
                 </Link>
             </Table.Td>
-
-            {/* <Table.Td>
-                <Group gap={0} justify="flex-end">
-                    <ActionIcon variant="subtle" color="gray">
-                        <IconEye style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                    </ActionIcon>
-
-                    <Menu
-                        transitionProps={{ transition: 'pop' }}
-                        withArrow
-                        position="bottom-end"
-                        withinPortal
-                    >
-                        <Menu.Target>
-                            <ActionIcon variant="subtle" color="gray">
-                                <IconDots style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                            </ActionIcon>
-                        </Menu.Target>
-                        <Menu.Dropdown>
-                            <Menu.Item
-                                leftSection={
-                                    <IconPencil style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                                }
-                            >
-                                Edit Details
-                            </Menu.Item>
-                            <Menu.Item
-                                leftSection={<IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-                                color="red"
-                            >
-                                Delete
-                            </Menu.Item>
-                        </Menu.Dropdown>
-                    </Menu>
-                </Group>
-            </Table.Td> */}
         </Table.Tr>
     ));
 
