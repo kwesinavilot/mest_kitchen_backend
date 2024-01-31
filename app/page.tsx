@@ -1,5 +1,5 @@
 import { Container, Title, SimpleGrid, Card, Group, Paper, Text, Stack } from "@mantine/core";
-import { CustomTable } from "@/components/mass/CustomTable";
+import { CustomTable } from "@/components/mass/RequestTable";
 import { EITListing } from "@/components/mass/EITListings";
 
 import classes from "./Homepage.module.css";

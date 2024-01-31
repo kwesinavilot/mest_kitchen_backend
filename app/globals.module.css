@@ -14,6 +14,13 @@ body {
   background: var(--mantine-color-gray-1);
 }
 
+.spaceup::after {
+  content: "";
+  display: block;
+  clear: both;
+  margin-bottom: 4% !important;
+}
+
 /* a {
   color: inherit;
   text-decoration: none;
