@@ -19,7 +19,7 @@ export function Header() {
                         <Avatar src="../../assets/headshot.png" variant="outline" alt="Hello" radius="xl" size="md" />
 
                         <Text fw={500} size="sm" lh={1}>
-                            Chef Vinyl
+                            Felicia Vinyl
                         </Text>
                     </Group>
                 </UnstyledButton>

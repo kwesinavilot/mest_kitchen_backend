@@ -5,7 +5,7 @@ import { IconAt, IconPhoneCall, IconWorldPin, IconPlus, IconPencil, IconTrash } 
 import Link from "next/link";
 import globalStyles from "../globals.module.css";
 import classes from "./Members.module.css";
-import tableStyles from "../../styles/Table.module.css";
+import tableStyles from "@/styles/Table.module.css";
 
 const preferenceList = [
     ,

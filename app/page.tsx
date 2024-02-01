@@ -4,6 +4,8 @@ import { EITListing } from "@/components/mass/EITListings";
 
 import classes from "./Homepage.module.css";
 
+import { greet } from "@/engine/Essentials";
+
 const foodCollectionRequests = [
   {
     id: '1',
@@ -160,12 +162,14 @@ const eitDirectory = [
 },
 ];
 
+const greeting = greet();
+
 export default function Home() {
   return (
     <main className={classes.main}>
       <Container size="xl" bg="transparent">
         <Container bg="transparent" fluid px="xs" mb="xl">
-          <Title order={2}>Good morning Chef</Title>
+          <Title order={2}>{greeting}, Felicia</Title>
         </Container>
 
         <SimpleGrid
