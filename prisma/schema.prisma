@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id              Int          @id @default(autoincrement())
+  orgID           String       @unique
+  name            String
+  email           String       @unique
+  phoneNumber     String
+  altNumber       String
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  Staff           Staff[]      //an organization has multiple staff
+  Member          Member[]     //an organization has multiple members
+}
+
+model Staff {
+  id              Int             @id @default(autoincrement())
+  staffID         String          @unique
+  organization    Organization    @relation(fields: [orgID], references: [orgID])
+  orgID           String          //the organization the staff belongs to
+  firstName       String
+  lastName        String
+  email           String          @unique
+  phoneNumber     String
+  role            String
+  password        String          @default("password")
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}
+
+model Member {
+  id              Int             @id @default(autoincrement())
+  memberID        String          @unique
+  organization    Organization    @relation(fields: [orgID], references: [orgID])
+  orgID           String          //the organization the member belongs to
+  firstName       String
+  lastName        String
+  otherNames      String
+  email           String          @unique
+  phoneNumber     String
+  nationality     String
+  preferences     Json
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  assigner        PickupRequest[] @relation("AssignedBy")
+  collector       PickupRequest[] @relation("CollectedBy")
+}
+
+model PickupRequest {
+  id              Int             @id @default(autoincrement())
+  requestID       String          @unique
+  orgID           String          //the organization the member belongs to
+  assigner        Member          @relation("AssignedBy", fields: [assignerID], references: [memberID])     //relation for person assigning collection       
+  collector       Member          @relation("CollectedBy", fields: [collectorID], references: [memberID])   //relation for person doing the collection 
+  assignerID      String          //the actual id of the person assigning
+  collectorID     String          //the actual id of the person collecting
+  mealType        String        
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}

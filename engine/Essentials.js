@@ -1,5 +1,4 @@
 import { DateTime } from "luxon";
-// const { DateTime } = require("luxon");
 
 //Create a greeting based on the time of the day
 export function greet()
@@ -18,5 +17,3 @@ export function greet()
     // console.log('Good evening');
     return 'Good evening';
 }
-
-// greet();

@@ -223,7 +223,7 @@ export default function Member() {
                 <Card withBorder radius="md" p="xl">
                     <Title order={3} c="cyan.6">Pickup Requests</Title>
 
-                    <ScrollArea h={400} offsetScrollbars>
+                    <ScrollArea h={500} offsetScrollbars>
                         <Table
                             highlightOnHover
                             stickyHeader

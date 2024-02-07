@@ -176,7 +176,6 @@ export default function Home() {
           cols={{ base: 1, sm: 2 }}
           spacing={{ base: 10, sm: 'xl' }}
           verticalSpacing={{ base: 'md', sm: 'xl' }}
-          // bg="red"
           px="sm"
           className={classes.simpleGrid}
         >
