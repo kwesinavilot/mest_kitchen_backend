@@ -68,3 +68,16 @@ model PickupRequest {
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
 }
+
+model Admin {
+  id              Int             @id @default(autoincrement())
+  adminID         String          @unique
+  firstName       String
+  lastName        String
+  email           String          @unique
+  phoneNumber     String
+  role            String
+  password        String          @default("password")
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}
