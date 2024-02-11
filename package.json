@@ -29,5 +29,8 @@
     "postcss-preset-mantine": "^1.12.3",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }

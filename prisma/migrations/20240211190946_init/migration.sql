@@ -36,7 +36,7 @@ CREATE TABLE "Member" (
     "orgID" TEXT NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
-    "otherNames" TEXT NOT NULL,
+    "otherNames" TEXT,
     "email" TEXT NOT NULL,
     "phoneNumber" TEXT NOT NULL,
     "nationality" TEXT NOT NULL,

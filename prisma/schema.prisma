@@ -45,7 +45,7 @@ model Member {
   orgID           String          //the organization the member belongs to
   firstName       String
   lastName        String
-  otherNames      String
+  otherNames      String?
   email           String          @unique
   phoneNumber     String
   nationality     String
