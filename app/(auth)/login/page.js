@@ -14,6 +14,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import classes from '@/app/(auth)/auth.module.css';
+import Link from 'next/link';
 
 export default function LoginPage() {
     const form = useForm({
@@ -72,7 +73,7 @@ export default function LoginPage() {
                                 onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                             />
 
-                            <Anchor component="button" size="sm">
+                            <Anchor component={Link} href="/password/link" size="sm">
                                 Forgot password?
                             </Anchor>
                         </Group>
