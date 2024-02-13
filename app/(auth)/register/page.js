@@ -16,12 +16,12 @@ import { useForm } from '@mantine/form';
 import classes from '@/app/(auth)/auth.module.css';
 import Link from 'next/link';
 
-export default function LoginPage() {
+export default function RegisterPage() {
     const form = useForm({
         initialValues: {
             email: '',
             password: '',
-            remember: true,
+            terms: true,
         },
 
         validate: {
@@ -34,13 +34,13 @@ export default function LoginPage() {
         <main>
             <Container size={450} my="8%">
                 <Title ta="center" className={classes.title}>
-                    Welcome back!
+                    Welcome to ChopLog!
                 </Title>
 
                 <Text c="dimmed" size="md" ta="center" mt={5}>
-                    Do not have an account yet?{' '}
-                    <Anchor size="md" component={Link} href="/register">
-                        Create account
+                    Already have an account?{' '}
+                    <Anchor size="md" component={Link} href="/login">
+                        Login
                     </Anchor>
                 </Text>
 
@@ -65,20 +65,15 @@ export default function LoginPage() {
                             error={form.errors.password && 'Password should include at least 6 characters'}
                         />
 
-                        <Group justify="space-between" mt="lg">
-                            <Checkbox
-                                label="Remember me"
-                                checked={form.values.remember}
-                                onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
-                            />
-
-                            <Anchor component={Link} href="/password/link" size="sm">
-                                Forgot password?
-                            </Anchor>
-                        </Group>
+                        <Checkbox
+                            label="I accept terms and conditions"
+                            checked={form.values.terms}
+                            onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
+                            mt="md"
+                        />
 
                         <Button type="submit" fullWidth mt="xl">
-                            Log In
+                            Register
                         </Button>
                     </Paper>
                 </form>
