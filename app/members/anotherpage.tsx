@@ -198,7 +198,7 @@ export default function Home() {
                 14
               </Text>
             </Card>
-
+j
             <Paper shadow="xs" withBorder p="xl" radius="md">
               <Title order={3} c="cyan.6">Meal pickup requests</Title>
 
