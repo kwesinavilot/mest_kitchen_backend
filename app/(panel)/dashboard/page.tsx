@@ -2,7 +2,7 @@ import { Container, Title, SimpleGrid, Card, Group, Paper, Text, Stack } from "@
 import { CustomTable } from "@/components/mass/RequestTable";
 import { EITListing } from "@/components/mass/EITListings";
 
-import classes from "./Homepage.module.css";
+import classes from "../panel.module.css";
 
 import { greet } from "@/engine/Essentials";
 
@@ -164,7 +164,7 @@ const eitDirectory = [
 
 const greeting = greet();
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <main className={classes.main}>
       <Container size="xl" bg="transparent">
@@ -198,7 +198,7 @@ export default function Home() {
                 14
               </Text>
             </Card>
-j
+
             <Paper shadow="xs" withBorder p="xl" radius="md">
               <Title order={3} c="cyan.6">Meal pickup requests</Title>
 

@@ -1,4 +1,4 @@
-import classes from './globals.module.css';
+import classes from '@/styles/Globals.module.css';
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Footer } from '@/components/layout/Footer';

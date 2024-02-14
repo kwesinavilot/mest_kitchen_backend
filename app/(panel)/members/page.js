@@ -3,7 +3,7 @@ import cx from 'clsx';
 import { Container, SimpleGrid, ScrollArea, Card, Text, Avatar, Button, Title, Group, Stack, Table, ActionIcon, rem, Center } from "@mantine/core";
 import { IconAt, IconPhoneCall, IconWorldPin, IconPlus, IconPencil, IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
-import globalStyles from "../globals.module.css";
+import globalStyles from "@/styles/Globals.module.css";
 import classes from "./Members.module.css";
 import tableStyles from "@/styles/Table.module.css";
 

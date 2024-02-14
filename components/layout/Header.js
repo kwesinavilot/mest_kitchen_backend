@@ -6,7 +6,7 @@ export function Header() {
     return (
         <header className={classes.header}>
             <Container size="xl" bg="cyan.6" className={classes.inner}>
-                <Link href="/" className={classes.link}>
+                <Link href="/dashboard" className={classes.link}>
                     <Text fw='bold' c="white" size="lg">
                         Choplog: MEST Kitchen
                     </Text>
