@@ -5,9 +5,9 @@ import Link from 'next/link';
 export function Header() {
     return (
         <header className={classes.header}>
-            <Container size="xl" bg="cyan.6" className={classes.inner}>
+            <Container fluid bg="white" className={classes.inner}>
                 <Link href="/dashboard" className={classes.link}>
-                    <Text fw='bold' c="white" size="lg">
+                    <Text fw='bold' c="cyan.6" size="lg">
                         Choplog: MEST Kitchen
                     </Text>
                 </Link>
@@ -18,7 +18,7 @@ export function Header() {
                     <Group justify="flex-start" gap="sm">
                         <Avatar src="../../assets/headshot.png" variant="outline" alt="Hello" radius="xl" size="md" />
 
-                        <Text fw={500} size="sm" lh={1}>
+                        <Text fw={500} c="cyan.6" size="sm" lh={1}>
                             Felicia Vinyl
                         </Text>
                     </Group>

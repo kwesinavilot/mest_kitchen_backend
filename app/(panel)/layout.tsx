@@ -1,8 +1,7 @@
 import classes from '@/styles/Globals.module.css';
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
-import { Footer } from '@/components/layout/Footer';
-import { Header } from '@/components/layout/Header';
+import { PanelAppShell } from '@/components/layout/PanelAppShell';
 
 export const metadata = {
   title: 'MEST Kitchen',
@@ -28,9 +27,7 @@ export default function RootLayout({
             },
           }}
         >
-          <Header />
-          {children}
-          <Footer />
+          <PanelAppShell children={children} />
         </MantineProvider>
       </body>
     </html>

@@ -1,7 +1,6 @@
 .header {
-    padding-top: var(--mantine-spacing-lg);
-    background-color: var(--mantine-color-white-0);
-    margin-bottom: 2%;
+    background-color: transparent;
+    border: none;
 }
 
 .inner {
@@ -10,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     color: var(--mantine-color-white-0);
-    border-radius: 20px;
+    border-radius: 0;
     padding: 0px 25px !important;
 }
 
@@ -28,6 +27,7 @@
 
     &:hover {
         background-color: var(--mantine-color-cyan-5);
+        color: "white";
     }
 
     @media (max-width: $mantine-breakpoint-xs) {
