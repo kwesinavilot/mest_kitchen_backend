@@ -1,32 +1,28 @@
 'use client';
 import { useState } from 'react';
-import { Group, Title } from '@mantine/core';
 import {
   IconBellRinging,
   IconFingerprint,
   IconKey,
-  IconSettings,
-  Icon2fa,
   IconDatabaseImport,
   IconReceipt2,
 } from '@tabler/icons-react';
 import classes from '@/styles/Sidebar.module.css';
+import Link from 'next/link';
 
 const data = [
-  { link: '', label: 'Notifications', icon: IconBellRinging },
-  { link: '', label: 'Billing', icon: IconReceipt2 },
-  { link: '', label: 'Security', icon: IconFingerprint },
-  { link: '', label: 'SSH Keys', icon: IconKey },
-  { link: '', label: 'Databases', icon: IconDatabaseImport },
-  { link: '', label: 'Authentication', icon: Icon2fa },
-  { link: '', label: 'Other Settings', icon: IconSettings },
+  { link: '/dashboard', label: 'Dashboard', icon: IconBellRinging },
+  { link: '/members', label: 'Members', icon: IconReceipt2 },
+  { link: '', label: 'Requests', icon: IconFingerprint },
+  { link: '', label: 'Reports', icon: IconKey },
+  { link: '', label: 'Staff', icon: IconDatabaseImport },
 ];
 
 export function Sidebar() {
   const [active, setActive] = useState('Billing');
 
   const links = data.map((item) => (
-    <a
+    <Link
       className={classes.link}
       data-active={item.label === active || undefined}
       href={item.link}
@@ -38,7 +34,7 @@ export function Sidebar() {
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (

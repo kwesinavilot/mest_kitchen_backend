@@ -148,7 +148,7 @@ export default function Member() {
                     cols={{ base: 1, sm: 2 }}
                     spacing={{ base: 10, sm: 'xl' }}
                     verticalSpacing={{ base: 'md', sm: 'xl' }}
-                    px="sm"
+                    px={0}
                     className={cx(classes.simpleGrid, globalStyles.spaceup)}
                 >
                     <Card withBorder radius="md" bg="cyan.6" p={0} c="white">

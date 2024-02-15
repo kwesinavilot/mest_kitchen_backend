@@ -11,9 +11,9 @@ export function PanelAppShell({children}) {
 
     return (
         <AppShell
-            header={{ height: 72 }}
-            navbar={{ width: 300, breakpoint: 'sm' }}
-            padding="xl"
+            header={{ height: 70 }}
+            navbar={{ width: 270, breakpoint: 'sm' }}
+            padding="30"
         >
             <AppShell.Header>
                 <Header />

@@ -5,7 +5,7 @@ import Link from 'next/link';
 export function Header() {
     return (
         <header className={classes.header}>
-            <Container fluid bg="white" className={classes.inner}>
+            <Container fluid className={classes.inner}>
                 <Link href="/dashboard" className={classes.link}>
                     <Text fw='bold' c="cyan.6" size="lg">
                         Choplog: MEST Kitchen
