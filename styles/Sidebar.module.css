@@ -9,6 +9,7 @@
   
   .navbarMain {
     flex: 1;
+    margin-top: var(--mantine-spacing-lg);
   }
   
   /* .header {
@@ -57,7 +58,7 @@
   
   .linkIcon {
     color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
-    margin-right: var(--mantine-spacing-sm);
-    width: rem(25px);
-    height: rem(25px);
+    margin-right: var(--mantine-spacing-md);
+    width: rem(30px);
+    height: rem(30px);
   }

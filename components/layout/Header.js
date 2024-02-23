@@ -7,9 +7,7 @@ export function Header() {
         <header className={classes.header}>
             <Container fluid className={classes.inner}>
                 <Link href="/dashboard" className={classes.link}>
-                    <Text fw='bold' c="cyan.6" size="lg">
-                        Choplog: MEST Kitchen
-                    </Text>
+                    <Text fw='bold' c="cyan.6" size="xl">Choplog</Text>
                 </Link>
 
                 <UnstyledButton
@@ -18,7 +16,7 @@ export function Header() {
                     <Group justify="flex-start" gap="sm">
                         <Avatar src="../../assets/headshot.png" variant="outline" alt="Hello" radius="xl" size="md" />
 
-                        <Text fw={500} c="cyan.6" size="sm" lh={1}>
+                        <Text fw={600} c="cyan.6" size="md" lh={1}>
                             Felicia Vinyl
                         </Text>
                     </Group>

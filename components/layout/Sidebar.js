@@ -2,24 +2,25 @@
 import { useState } from 'react';
 import {
   IconBellRinging,
-  IconFingerprint,
-  IconKey,
-  IconDatabaseImport,
-  IconReceipt2,
+  IconListDetails,
+  IconBrandGoogleAnalytics,
+  IconUsers,
+  IconFriends,
 } from '@tabler/icons-react';
 import classes from '@/styles/Sidebar.module.css';
 import Link from 'next/link';
+import { Card, Group, Avatar, Text } from '@mantine/core';
 
 const data = [
   { link: '/dashboard', label: 'Dashboard', icon: IconBellRinging },
-  { link: '/members', label: 'Members', icon: IconReceipt2 },
-  { link: '', label: 'Requests', icon: IconFingerprint },
-  { link: '', label: 'Reports', icon: IconKey },
-  { link: '', label: 'Staff', icon: IconDatabaseImport },
+  { link: '/members', label: 'Members', icon: IconFriends },
+  { link: '', label: 'Requests', icon: IconListDetails },
+  { link: '', label: 'Reports', icon: IconBrandGoogleAnalytics },
+  { link: '', label: 'Staff', icon: IconUsers },
 ];
 
 export function Sidebar() {
-  const [active, setActive] = useState('Billing');
+  const [active, setActive] = useState('Dashboard');
 
   const links = data.map((item) => (
     <Link
@@ -39,9 +40,19 @@ export function Sidebar() {
 
   return (
     <nav className={classes.navbar}>
+      <Card shadow="xs" padding="sm" radius="sm" withBorder>
+        <Group justify="flex-start" gap="sm">
+          <Avatar color="cyan.6" variant="light" alt="Hello" radius="xl" size="md">M</Avatar>
+
+          <Text fw={600} size="lg" truncate>
+            MEST Kitchen
+          </Text>
+        </Group>
+      </Card>
+
       <div className={classes.navbarMain}>
         {links}
-      </div> 
+      </div>
     </nav>
   );
 }
