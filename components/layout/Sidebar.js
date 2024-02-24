@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   IconBellRinging,
   IconListDetails,
@@ -19,8 +20,16 @@ const data = [
   { link: '', label: 'Staff', icon: IconUsers },
 ];
 
-export function Sidebar() {
+export function Sidebar({ activePath }) {
   const [active, setActive] = useState('Dashboard');
+  const router = useRouter();
+
+  console.log(activePath);
+
+  // Use the useEffect hook to update the active state based on the current pathname
+  // useEffect(() => {
+  //   setActive(activePath);
+  // }, [router.pathname]);
 
   const links = data.map((item) => (
     <Link

@@ -1,13 +1,14 @@
 'use client';
 import '@mantine/core/styles.css';
 import { AppShell, Burger } from '@mantine/core';
-// import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { useDisclosure } from '@mantine/hooks';
+import { usePathname } from 'next/navigation';
 
 export function PanelAppShell({children}) {
     const [opened, { toggle }] = useDisclosure();
+    const currentPath = usePathname();
 
     return (
         <AppShell
@@ -20,7 +21,7 @@ export function PanelAppShell({children}) {
             </AppShell.Header>
 
             <AppShell.Navbar>
-                <Sidebar />
+                <Sidebar activePath={currentPath} />
             </AppShell.Navbar>
 
             <AppShell.Main>
