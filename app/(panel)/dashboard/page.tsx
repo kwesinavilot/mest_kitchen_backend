@@ -178,14 +178,6 @@ export default function Dashboard() {
         px="sm"
         className={classes.simpleGrid}
       >
-        <Paper shadow="xs" withBorder p="xl" radius="md">
-          <Title order={3} c="cyan.6">EIT Directory</Title>
-
-          <Container mt="sm" fluid p={0}>
-            <EITListing data={eitDirectory} />
-          </Container>
-        </Paper>
-
         <Stack
           justify="flex-start"
           gap="xl"
@@ -197,14 +189,6 @@ export default function Dashboard() {
               14
             </Text>
           </Card>
-
-          <Paper shadow="xs" withBorder p="xl" radius="md">
-            <Title order={3} c="cyan.6">Meal pickup requests</Title>
-
-            <Container mt="sm" fluid p={0}>
-              <CustomTable data={foodCollectionRequests} />
-            </Container>
-          </Paper>
         </Stack>
       </SimpleGrid>
     </Container>

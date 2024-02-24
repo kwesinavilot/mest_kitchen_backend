@@ -29,7 +29,6 @@ export function Sidebar() {
       href={item.link}
       key={item.label}
       onClick={(event) => {
-        event.preventDefault();
         setActive(item.label);
       }}
     >
