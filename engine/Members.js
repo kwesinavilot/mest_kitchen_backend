@@ -42,6 +42,16 @@ export async function deleteMember(id) {
  * @returns {Promise<Array>} A promise that resolves with an array of member objects.
  */
 export async function listMembers() {
-  return prisma.member.findMany();
+  return prisma.member.findMany({
+    select: {
+      memberID: true,
+      firstName: true,
+      lastName: true,
+      otherNames: true,
+      email: true,
+      avatar: true,
+      preferenceLevel: true,
+    }
+  });
 }
 

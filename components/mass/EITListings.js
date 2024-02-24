@@ -14,31 +14,31 @@ const levelColors = {
 
 export function EITListing({ data }) {
     const rows = data.map((item) => (
-        <Table.Tr key={item.name}>
+        <Table.Tr key={item.memberID}>
             <Table.Td>
-                <Link href={`/members/1`} className={classes.link}>
+                <Link href={`/members/${item.memberID}`} className={classes.link}>
                     <Avatar size={40} src={item.avatar} radius={40} />
                 </Link>
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members/1`} className={classes.link}>
+                <Link href={`/members/${item.memberID}`} className={classes.link}>
                     <Text fz="sm" fw={500}>
-                        {item.name}
+                        {item.firstName} {item.otherName} {item.lastName}
                     </Text>
                 </Link>
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members/1`} className={classes.link}>
+                <Link href={`/members/${item.memberID}`} className={classes.link}>
                     <Text>{item.email}</Text>
                 </Link>
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members/1`} className={classes.link}>
+                <Link href={`/members/${item.memberID}`} className={classes.link}>
                     <Badge color={levelColors[item.level]} variant="light">
-                        {item.level.toUpperCase()}
+                        {item.preferenceLevel.toUpperCase()}
                     </Badge>
                 </Link>
             </Table.Td>

@@ -1,6 +1,7 @@
 import { Container, Title, SimpleGrid, Paper, } from "@mantine/core";
 import { EITListing } from "@/components/mass/EITListings";
 
+import { listMembers } from "@/engine/Members";
 import classes from "../panel.module.css";
 
 const eitDirectory = [
@@ -111,13 +112,16 @@ const eitDirectory = [
   },
 ];
 
-export default function AllMembers() {
+export default async function AllMembers() {
+  const members = await listMembers();
+  // console.log(members[0]);
+
   return (
     <Container size="xl" bg="transparent">
         <Title order={3}>EIT Directory</Title>
 
         <Paper shadow="xs" withBorder mt="xl" radius="md" py="lg" px={0}>
-            <EITListing data={eitDirectory} />
+            <EITListing data={members} />
         </Paper>
     </Container>
   );

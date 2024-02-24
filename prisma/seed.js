@@ -33,6 +33,7 @@ async function main() {
             email: 'johndoe@example.com',
             phoneNumber: '55500003',
             role: 'Chef',
+            avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
             orgID: mealShare.orgID,
         }
     });
@@ -45,6 +46,7 @@ async function main() {
             email: 'janedoe@example.com',
             phoneNumber: '55500004',
             role: 'Cook',
+            avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
             orgID: mealShare.orgID
         }
     });
@@ -57,6 +59,7 @@ async function main() {
             email: 'adwoa.mansah@foodbank.com',
             phoneNumber: '55500003',
             role: 'Chef',
+            avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
             orgID: foodBank.orgID
         }
     });
@@ -69,6 +72,7 @@ async function main() {
             email: 'bobsmith@@foodbank.com',
             phoneNumber: '55500004',
             role: 'Cook',
+            avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png',
             orgID: foodBank.orgID
         }
     });
@@ -79,6 +83,7 @@ async function main() {
             {
                 memberID: 'MEMB123456',
                 orgID: foodBank.orgID,
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
                 firstName: 'John',
                 lastName: 'Doe',
                 email: 'john.doe@foodbank.com',
@@ -89,6 +94,7 @@ async function main() {
             {
                 memberID: 'MEMB234567',
                 orgID: foodBank.orgID,
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
                 firstName: 'Jane',
                 lastName: 'Smith',
                 email: 'jane.smith@foodbank.com',
@@ -99,6 +105,7 @@ async function main() {
             {
                 memberID: 'MEMB345678',
                 orgID: foodBank.orgID,
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png',
                 firstName: 'Alice',
                 lastName: 'Johnson',
                 email: 'alice.johnson@foodbank.com',
@@ -108,6 +115,7 @@ async function main() {
             },
             {
                 memberID: 'MEMB654321',
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
                 orgID: mealShare.orgID,
                 firstName: 'Michael',
                 lastName: 'Brown',
@@ -118,6 +126,7 @@ async function main() {
             },
             {
                 memberID: 'MEMB765432',
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
                 orgID: mealShare.orgID,
                 firstName: 'Sophia',
                 lastName: 'Wilson',
@@ -128,6 +137,7 @@ async function main() {
             },
             {
                 memberID: 'MEMB876543',
+                avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
                 orgID: mealShare.orgID,
                 firstName: 'David',
                 lastName: 'Martinez',

@@ -16,7 +16,8 @@ model Organization {
   name            String
   email           String       @unique
   phoneNumber     String
-  altNumber       String
+  altNumber       String?
+  avatar          String?
   createdAt       DateTime     @default(now())
   updatedAt       DateTime     @updatedAt
   Staff           Staff[]      //an organization has multiple staff
@@ -33,6 +34,7 @@ model Staff {
   email           String          @unique
   phoneNumber     String
   role            String
+  avatar          String?
   password        String          @default("password")
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
@@ -49,6 +51,8 @@ model Member {
   email           String          @unique
   phoneNumber     String
   nationality     String
+  avatar          String?
+  preferenceLevel String          @default("regular")
   preferences     Json
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
