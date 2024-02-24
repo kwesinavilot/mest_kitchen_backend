@@ -16,13 +16,13 @@ export function EITListing({ data }) {
     const rows = data.map((item) => (
         <Table.Tr key={item.name}>
             <Table.Td>
-                <Link href={`/members`} className={classes.link}>
+                <Link href={`/members/1`} className={classes.link}>
                     <Avatar size={40} src={item.avatar} radius={40} />
                 </Link>
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members`} className={classes.link}>
+                <Link href={`/members/1`} className={classes.link}>
                     <Text fz="sm" fw={500}>
                         {item.name}
                     </Text>
@@ -30,13 +30,13 @@ export function EITListing({ data }) {
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members`} className={classes.link}>
+                <Link href={`/members/1`} className={classes.link}>
                     <Text>{item.email}</Text>
                 </Link>
             </Table.Td>
 
             <Table.Td>
-                <Link href={`/members`} className={classes.link}>
+                <Link href={`/members/1`} className={classes.link}>
                     <Badge color={levelColors[item.level]} variant="light">
                         {item.level.toUpperCase()}
                     </Badge>
